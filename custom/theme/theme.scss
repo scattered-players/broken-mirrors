@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Mate+SC&display=swap');
+
+
+@media not screen and (prefers-reduced-motion) {
+  html {
+    transition: filter 0.5s;
+    transform: none;
+    transform-origin: 50vw 50vh;
+    filter: none;
+
+    &:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      pointer-events: none;
+      z-index: 100;
+      transition: backdrop-filter 0.5s;
+      backdrop-filter: none;
+    }
+
+    &:after {
+      content: 'With Enough Eyes, All Bugs Are Shallow';
+      position: absolute;
+      top: 45vh;
+      left: 40vw;
+      bottom: 45vh;
+      right: 40vw;
+      background: beige;
+      border: 2px solid gold;
+      color: black;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font-family: 'Mate SC', Georgia, 'Times New Roman', Times, serif;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 101;
+      transition: opacity 0.5s;
+    }
+    
+    &.tremor1 {
+      // filter: brightness(10);
+      &:before {
+        backdrop-filter: brightness(10);
+      }
+    }
+    
+    &.tremor2 {
+      filter: contrast(100);
+      animation: shake1 0.5s cubic-bezier(.36,.07,.19,.97) infinite;
+      // &:before {
+      //   backdrop-filter: saturate(100) invert(1);
+      // }
+    }
+    
+    &.tremor3 {
+      filter: contrast(100) invert(1);
+      animation: shake2 0.5s cubic-bezier(.36,.07,.19,.97) infinite;
+      // &:before {
+      //   backdrop-filter: contrast(100);
+      // }
+    }
+
+    &.tiger {
+      .actor-app .local-stream, .interactionscreen-component .video-visible {
+        filter: hue-rotate(60deg) invert(1) saturate(10);
+      }
+    }
+
+    &.yavascript-one.yavascript-two:before {
+      backdrop-filter: hue-rotate(60deg) invert(1);
+    }
+
+    &.yavascript-one.yavascript-two:after {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes shake1 {
+  10%, 90% {
+    transform: rotate(0.2deg) translate3d(-1px, -4px, 0);
+  }
+  
+  20%, 80% {
+    transform: rotate(-0.1deg) translate3d(2px, 4px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(0.4deg) translate3d(-4px, -1px, 0);
+  }
+
+  40%, 60% {
+    transform: rotate(-0.4deg) translate3d(4px, 2px, 0);
+  }
+}
+
+@keyframes shake2 {
+  10%, 90% {
+    transform: rotate(2deg) translate3d(-10px, -40px, 0);
+  }
+  
+  20%, 80% {
+    transform: rotate(-1deg) translate3d(20px, 40px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(4deg) translate3d(-40px, -10px, 0);
+  }
+
+  40%, 60% {
+    transform: rotate(-4deg) translate3d(40px, 20px, 0);
+  }
+}
+
+body {
+  font-family: 'Mate SC', Georgia, 'Times New Roman', Times, serif;
+  background-image: url('/media/backgrounds/Artboard7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+#app, body {
+  .MuiTypography-body1, .MuiTypography-body2, .MuiTab-root, .MuiButton-root, .MuiInputBase-input, .MuiFormLabel-root {
+    font-family: 'Mate SC', Georgia, 'Times New Roman', Times, serif;
+  }
+  .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
+    font-family: 'Mate SC', Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .MuiTab-root, .MuiButton-root {
+    text-transform: capitalize;
+  }
+}
+
+.feed-stats {
+  color: white;
+}
+
+.preshowscreen-component {
+  background-image: url('/media/backgrounds/Artboard1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    font-family: 'Cinzel Decorative', monospace;
+  }
+}
+
+.theprogram-component {
+  h2 {
+    font-family: 'Cinzel Decorative', monospace;
+  }
+
+  h3, h4, p {
+    font-family: 'Mate SC', Georgia, 'Times New Roman', Times, serif;
+  }
+}
+
+.partysidebar-component {
+  background-image: url('/media/backgrounds/Artboard3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-item {
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    // background: red;
+    margin-top: 3px;
+    margin-bottom: -3px;
+    margin-left: -5px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // &.asset-BazQux:before {
+  //   background-image: url('/media/icons/The+Alliance.png');
+  // }
+
+  // &.asset-FooBar:before {
+  //   background-image: url('/media/icons/The+Alliance.png');
+  // }
+
+  &.asset-Atia:before {
+    background-image: url('/media/icons/Atia.Erika.Icon.png');
+  }
+
+  &.asset-Desmond:before {
+    background-image: url('/media/icons/desmond.caitlin.icon.png');
+  }
+
+  &.asset-Eowin:before {
+    background-image: url('/media/icons/nathanielle.alex.icon.png');
+  }
+
+  &.asset-Fearn:before {
+    background-image: url('/media/icons/fearn.shiv.icon.png');
+  }
+
+  &.asset-Fennix:before {
+    background-image: url('/media/icons/fennix.ashley.icon.png');
+  }
+
+  &.asset-Jeremy:before {
+    background-image: url('/media/icons/Jeremy.kat.icon-blend2.png');
+  }
+
+  &.asset-Kleorg:before {
+    background-image: url('/media/icons/Kleorg.heiko.icon.png');
+  }
+
+  &.asset-Lahin:before {
+    background-image: url('/media/icons/Blathnaid.Jenn.Icon.png');
+  }
+
+  &.asset-Makalani:before {
+    background-image: url('/media/icons/Makalai.J.Icon.png');
+  }
+
+  &.asset-Mazzy:before {
+    background-image: url('/media/icons/Mazzy.steve.icon.png');
+  }
+
+  &.asset-Mesekiu:before {
+    background-image: url('/media/icons/meskiu.mani.icon.png');
+  }
+
+  &.asset-Olivia:before {
+    background-image: url('/media/icons/olivia.sydney.icon-burst.png');
+  }
+
+  &.asset-One:before {
+    background-image: url('/media/icons/one.megan.icon.png');
+  }
+
+  &.asset-Prizilla:before {
+    background-image: url('/media/icons/prizilla.jess.icon-green.png');
+  }
+
+  &.asset-Puddlemouth:before {
+    background-image: url('/media/icons/puddlemouth.lance.icon.png');
+  }
+
+  &.asset-ShenYuan:before {
+    background-image: url('/media/icons/shenyuan.brett.icon.png');
+  }
+
+  &.asset-Simon:before {
+    background-image: url('/media/icons/simon.matt.icon.png');
+  }
+
+  &.asset-Ty:before {
+    background-image: url('/media/icons/ty.derek.icon.png');
+  }
+
+  &.asset-Yukeko:before {
+    background-image: url('/media/icons/keko.emily.icon-flowers.png');
+  }
+
+  &.asset-Zelkie:before {
+    background-image: url('/media/icons/selkie.nina.icon.png');
+  }
+
+  .MuiListItemText-secondary {
+    color: transparent;
+  }
+}
+
+.transit-marker {
+  font-family: 'Cinzel Decorative', monospace;
+  color: transparent;
+  background: repeating-linear-gradient(to right, silver 0px, gray 10px, gray 11px, silver 20px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: portal-flash linear 2.5s infinite;
+  text-shadow: 0px 0px 5px gray;
+  font-weight: 700;
+}
+
+@keyframes portal-flash {
+  0% {
+    background-position-x: 0px;
+  }
+  
+  100% {
+    background-position-x: 100px;
+  }
+}
+
+
+
+.video-feed-wrapper {
+  border-top: 5px ridge goldenrod;
+  border-left: 5px ridge goldenrod;
+  border-bottom: 5px groove goldenrod;
+  border-right: 5px groove goldenrod;
+  .nametag-wrapper {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -10px;
+      right: -10px;
+      z-index: -1;
+      border-bottom: 5px ridge goldenrod;
+      background-image: url('/media/backgrounds/Artboard4.png');
+    }
+
+    &:before {
+      // transform: skew(30deg, 0);
+      right: 0px;
+      border-left: 5px ridge goldenrod;
+    }
+
+    &:after {
+      // transform: skew(-30deg, 0);
+      left: 0px;
+      border-right: 5px ridge goldenrod;
+    }
+  }
+
+  .local-button-row {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    // margin-left: -50%;
+    .button-row-backdrop {
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+      overflow: hidden;
+      &:before {
+        content: '';
+        border-radius: 20px;
+        // border-top-left-radius: 20px;
+        // border-top-right-radius: 20px;
+        background-image: url('/media/backgrounds/Artboard4.png');
+        box-shadow: 0px 0px 5px 5px dodgerblue;
+        // -webkit-mask-image: linear-gradient(to right, black 75%, transparent 95%);
+        // mask-image: linear-gradient(to right, black 75%, transparent 95%);
+        position: absolute;
+        top: 20px;
+        bottom:20px;
+        left: 20px;
+        right: 20px;
+        z-index:0;
+      }
+    }
+  }
+}
+
+.actor-app {
+  .upper-region .local-feed-wrapper .local-button-row {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    // margin-left: -50%;
+    .button-row-backdrop {
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+      overflow: hidden;
+      &:before {
+        content: '';
+        border-radius: 20px;
+        // border-top-left-radius: 20px;
+        // border-top-right-radius: 20px;
+        background-image: url('/media/backgrounds/Artboard4.png');
+        box-shadow: 0px 0px 5px 5px dodgerblue;
+        // -webkit-mask-image: linear-gradient(to right, black 75%, transparent 95%);
+        // mask-image: linear-gradient(to right, black 75%, transparent 95%);
+        position: absolute;
+        top: 20px;
+        bottom:20px;
+        left: 20px;
+        right: 20px;
+        z-index:0;
+      }
+    }
+  }
+
+  .videofeed-component .button-row {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    // margin-left: -50%;
+    .button-row-backdrop {
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+      overflow: hidden;
+      &:before {
+        content: '';
+        border-radius: 20px;
+        // border-top-left-radius: 20px;
+        // border-top-right-radius: 20px;
+        background-image: url('/media/backgrounds/Artboard4.png');
+        box-shadow: 0px 0px 5px 5px dodgerblue;
+        // -webkit-mask-image: linear-gradient(to right, black 75%, transparent 95%);
+        // mask-image: linear-gradient(to right, black 75%, transparent 95%);
+        position: absolute;
+        top: 20px;
+        bottom:20px;
+        left: 20px;
+        right: 20px;
+        z-index:0;
+      }
+    }
+  }
+}
+
+
+.attendeevideofeed-component {
+  // border-top: 5px ridge goldenrod;
+  // border-left: 5px ridge goldenrod;
+  // border-bottom: 5px groove goldenrod;
+  // border-right: 5px groove goldenrod;
+  // border-radius: 20px;
+  
+  
+  .button-row {
+    // border-left: 5px ridge #aaa;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    
+    .button-row-backdrop {
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+      overflow: hidden;
+      &:before {
+        content: '';
+        border-radius: 20px;
+        background-image: url('/media/backgrounds/Artboard4.png');
+        box-shadow: 0px 0px 5px 5px tomato;
+        position: absolute;
+        top: 20px;
+        bottom:20px;
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+}
